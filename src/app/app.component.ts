@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { UsuarioService } from './Service/usuario.service';
+import { MatDialog } from '@angular/material/dialog';
+import { RegistrarUsersComponent } from './Components/registrar-users/registrar-users.component';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +9,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.sass']
 })
 export class AppComponent {
-  title = 'PruebaTTFront';
+
+  
 }

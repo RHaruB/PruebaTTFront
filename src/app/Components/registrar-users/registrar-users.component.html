@@ -1,0 +1,83 @@
+<div class="col text-center" style="border-bottom: 2px solid #e2dcdc; margin-bottom: 5px;">
+ 
+        <h1>{{titulo}}</h1>
+
+
+</div>
+<div class="row" style="border-bottom: 2px solid #e2dcdc; margin-bottom: 10px;">
+    <div class="col-6">
+        <div>
+            <label>Departameto:</label>
+        </div>
+        <mat-select [(ngModel)]="Usuarios.idDepartamento">
+            <mat-option *ngFor="let departamento of departamentos" [value]="departamento.id">
+                {{departamento.descripcion}}
+            </mat-option>
+        </mat-select>
+
+        <div>
+            <div>
+                <label>Usuario:</label>
+            </div>
+            <input matInput type="text" [(ngModel)]="Usuarios.usuario" >
+        </div>
+        <div>
+            <div>
+                <label>Primer Nombre:</label>
+            </div>
+            <input matInput type="text" id="primerNombre" name="primerNombre" class="text-input" [(ngModel)]="Usuarios.primerNombre">
+        </div>
+        <div>
+            <div>
+                <label>Primer Apellido:</label>
+            </div>
+            <input type="text" id="primerApellido" name="primerApellido" class="text-input" [(ngModel)]="Usuarios.primerApellido">
+        </div>
+    </div>
+    <div class="col-6">
+        <div>
+            <label>Cargo:</label>
+        </div>
+        <mat-select [(ngModel)]="Usuarios.idCargo">
+            <mat-option *ngFor="let cargo of cargos" [value]="cargo.id">
+                {{cargo.descripcion}}
+            </mat-option>
+        </mat-select>
+        <div>
+            <div>
+                <label>Email:</label>
+            </div>
+            <input type="text" id="usuario" name="usuario" class="text-input" [(ngModel)]="Usuarios.email">
+        </div>
+        <div>
+            <div>
+                <label>Segundo Nombre:</label>
+            </div>
+            <input type="text" id="segundoNombre" name="segundoNombre" class="text-input" [(ngModel)]="Usuarios.segundoNombre">
+        </div>
+
+        <div>
+            <div>
+                <label>Segundo Apellido:</label>
+            </div>
+            <input type="text" id="segundoApellido" name="segundoApellido" class="text-input" [(ngModel)]="Usuarios.segundoApellido">
+        </div>
+    </div>
+    <div class="row">
+        <br>
+    </div>
+</div>
+<div class="row">
+    <div class="col-7">
+
+    </div>
+    <div class="col-5">
+        <button class="btn btn-primary" (click)="ingresarPersona()">
+            Registrar
+        </button>
+        <button class="btn" (click)="cerrar()">
+            Cancelar
+        </button>
+    </div>
+
+</div>
